@@ -23,6 +23,8 @@ console.log(emp1.getDetails());
 console.log(emp1.calculateAnnualSalary()); 
 // Expected output: 60000
 
+
+
 //Task 2 Creating a Manager Class
 
 class Manager extends Employee{
@@ -48,6 +50,8 @@ console.log(mgr1.getDetails());
 console.log(mgr1.calculateBonus()); 
 // Expected output: 9600
 
+
+
 //Task 3 Creating a Company Class
 
 class Company {
@@ -62,6 +66,7 @@ class Company {
         return this.employees.forEach(employee=>console.log(employee.getDetails()));
     }//log employee details
 //create company class
+
 
 
 //Task 4 Implementing a Payroll System
@@ -84,7 +89,7 @@ class Company {
 };//end of class
 
 
-
+//OUTPUT TESTS
 //Task 3 output test
 const company = new Company("TechCorp");
 company.addEmployee(emp1);
