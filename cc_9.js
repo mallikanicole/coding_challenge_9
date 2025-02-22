@@ -56,8 +56,31 @@ class Company {
     listEmployees(){
         return this.employees.forEach(employee=>console.log(employee.getDetails()));
     }//log employee details
-};//create company class
+//create company class
 
+// const company = new Company("TechCorp");
+// company.addEmployee(emp1);
+// company.addEmployee(mgr1);
+// company.listEmployees();
+// // Expected output:
+// "Employee: Alice Johnson, ID: 101, Department: Sales, Salary: $5000"
+// "Manager: John Smith, ID: 201, Department: IT, Salary: $8000, Team Size: 5"
+
+//Task 4 Implementing a Payroll System
+
+
+    calculateTotalPayroll(){
+        return this.employees.reduce((total,employee)=>{
+            return total+employee.calculateAnnualSalary();
+        },0);
+    };//calculate total payroll
+
+
+};
+
+
+
+//Task 3 output test
 const company = new Company("TechCorp");
 company.addEmployee(emp1);
 company.addEmployee(mgr1);
@@ -65,16 +88,10 @@ company.listEmployees();
 // Expected output:
 // "Employee: Alice Johnson, ID: 101, Department: Sales, Salary: $5000"
 // "Manager: John Smith, ID: 201, Department: IT, Salary: $8000, Team Size: 5"
-
-//Task 4 Implementing a Payroll System
-
-return class Company{
-    calculateTotalPayroll(){
-        return this.employees.reduce((total,employee)=>{
-            return total+employee.calculateAnnualSalary();
-        },0);
-    };//calculate total payroll
-}
-
+//Task 4 output test
 console.log(company.calculateTotalPayroll()); 
 // Expected output: 165600 (assuming emp1 and mgr1 salaries)
+//Task 5 output test
+company.promoteToManager(emp1, 3);
+company.listEmployees();
+// Expected output: "Manager: Alice Johnson, ID: 101, Department: Sales, Salary: $5000, Team Size: 3"
