@@ -36,6 +36,9 @@ class Manager extends Employee{
     calculateBonus(){
         return (this.salary*12)*.1
     };//calculate manager bonus
+    calculateAnnualSalary(){
+        return this.salary*12+this.calculateBonus();
+    }
 };//add manager to class
 
 const mgr1 = new Manager("John Smith", 201, "IT", 8000, 5);
@@ -62,7 +65,6 @@ class Company {
 
 
 //Task 4 Implementing a Payroll System
-
 
     calculateTotalPayroll(){
         return this.employees.reduce((total,employee)=>{ return total+employee.calculateAnnualSalary();
