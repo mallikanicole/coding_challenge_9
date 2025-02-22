@@ -65,8 +65,7 @@ class Company {
 
 
     calculateTotalPayroll(){
-        return this.employees.reduce((total,employee)=>{
-            return total+employee.calculateAnnualSalary();
+        return this.employees.reduce((total,employee)=>{ return total+employee.calculateAnnualSalary();
         },0);
     };//calculate total payroll
 
@@ -78,9 +77,9 @@ class Company {
     promoteToManager (employee, teamSize){
         const index=this.employees.indexOf(employee);
         this.employees[index]=new Manager(employee.name,employee.id,employee.department,employee.salary,teamSize)
-    }
+    }//promote an employee to manager
 
-};
+};//end of class
 
 
 
