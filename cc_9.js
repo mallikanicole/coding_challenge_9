@@ -1,4 +1,6 @@
 //Task 1 Creating an Employee Class
+
+
 class Employee {
     constructor(name,id,department,salary) {
         this.name=name;
@@ -58,13 +60,6 @@ class Company {
     }//log employee details
 //create company class
 
-// const company = new Company("TechCorp");
-// company.addEmployee(emp1);
-// company.addEmployee(mgr1);
-// company.listEmployees();
-// // Expected output:
-// "Employee: Alice Johnson, ID: 101, Department: Sales, Salary: $5000"
-// "Manager: John Smith, ID: 201, Department: IT, Salary: $8000, Team Size: 5"
 
 //Task 4 Implementing a Payroll System
 
@@ -75,6 +70,15 @@ class Company {
         },0);
     };//calculate total payroll
 
+
+
+//Task 5 Implementing Promotions
+
+
+    promoteToManager (employee, teamSize){
+        const index=this.employees.indexOf(employee);
+        this.employees[index]=new Manager(employee.name,employee.id,employee.department,employee.salary,teamSize)
+    }
 
 };
 
